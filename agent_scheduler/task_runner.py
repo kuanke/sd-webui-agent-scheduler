@@ -479,6 +479,7 @@ class TaskRunner:
 
         res = None
         try:
+            kwargs["force_task_id"] = task_id
             result = (
                 self.__api.img2imgapi(StableDiffusionImg2ImgProcessingAPI(**kwargs))
                 if is_img2img
